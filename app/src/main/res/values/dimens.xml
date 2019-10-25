@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- pre defined values for spacing (padding, margins) based on 8dp grid system -->
+    <dimen name="space_1">8dp</dimen>
+    <dimen name="space_2">16dp</dimen>
+    <dimen name="space_3">24dp</dimen>
+    <dimen name="space_4">32dp</dimen>
+    <dimen name="space_5">40dp</dimen>
+    <dimen name="space_6">48dp</dimen>
+    <dimen name="space_7">56dp</dimen>
+    <dimen name="space_8">64dp</dimen>
+
+    <dimen name="text_size_xsmall">10dp</dimen>
+    <dimen name="text_size_small">12dp</dimen>
+    <dimen name="text_size_medium">14dp</dimen>
+    <dimen name="text_size_large">16dp</dimen>
+    <dimen name="text_size_xlarge">18dp</dimen>
+    <dimen name="text_size_xxlarge">20dp</dimen>
+
+    <dimen name="loading_size">80dp</dimen>
+    <dimen name="elevation_card">2dp</dimen>
+    <dimen name="text_size_title">18sp</dimen>
+    <dimen name="card_radius">5dp</dimen>
+
+</resources>
