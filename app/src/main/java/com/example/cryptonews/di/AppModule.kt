@@ -7,6 +7,8 @@ import com.example.cryptonews.network.CryptoNewsService
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.jakewharton.picasso.OkHttp3Downloader
+import com.squareup.picasso.Picasso
 import dagger.Module
 import dagger.Provides
 import okhttp3.Interceptor
@@ -54,6 +56,13 @@ class AppModule(private val application: Application) {
         return OkHttpClient.Builder()
             .addInterceptor(Logger())
             .build()
+    }
+
+    @Singleton
+    @Provides
+    internal fun providePicassoClient(application: Application, client: OkHttpClient): Picasso {
+
+        return Picasso.Builder(application).downloader(OkHttp3Downloader(client)).build()
     }
 
 
