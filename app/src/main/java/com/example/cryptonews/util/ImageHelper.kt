@@ -1,8 +1,9 @@
-package com.example.cryptonews.network
+package com.example.cryptonews.util
 
-import android.content.Context
 import android.widget.ImageView
 import com.example.cryptonews.R
+import com.squareup.picasso.Callback
+import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -13,9 +14,8 @@ import javax.inject.Singleton
  * to the library in case we changed our mind using picasso
  */
 @Singleton
-class ImageHelper @Inject private constructor(
-    private val picasso: Picasso,
-    private val ctx: Context
+class ImageHelper @Inject constructor(
+    private val picasso: Picasso
 ) {
 
 
@@ -29,6 +29,7 @@ class ImageHelper @Inject private constructor(
             picasso
                 .load(url)
                 .placeholder(placeHolder)
+                .centerCrop()
                 .into(imgView)
 
         } catch (e: Exception) {
@@ -36,23 +37,33 @@ class ImageHelper @Inject private constructor(
         }
     }
 
-    fun loadImageFit(url: String, imgView: ImageView?, placeHolder: Int) {
+    fun loadImageOfflineFirst(url: String, imgView: ImageView?, placeHolder: Int) {
         try {
-            try {
-                imgView?.setImageResource(R.drawable.image_ph)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-            picasso
-                .load(url)
+            picasso.load(url)
                 .placeholder(placeHolder)
-                .fit()
-                .into(imgView)
+                .networkPolicy(NetworkPolicy.OFFLINE)
+                .into(imgView, object : Callback {
+                    override fun onSuccess() {
+
+
+                    }
+
+                    override fun onError() {
+                        //load from network if its not available
+                        picasso
+                            .load(url)
+                            .placeholder(placeHolder)
+                            .into(imgView)
+                    }
+
+                })
+
 
         } catch (e: Exception) {
             e.printStackTrace()
         }
     }
+
 
     fun loadImageWithResize(url: String, imgView: ImageView?, cropSize: Int) {
         try {
@@ -81,6 +92,7 @@ class ImageHelper @Inject private constructor(
         try {
             picasso
                 .load(url)
+                // .centerCrop()
                 .into(imgView)
         } catch (e: Exception) {
             e.printStackTrace()

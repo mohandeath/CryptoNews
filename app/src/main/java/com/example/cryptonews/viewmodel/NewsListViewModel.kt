@@ -16,7 +16,7 @@ class NewsListViewModel @Inject constructor(
     private val appContext: Application,
     private val placesRepository: NewsRepository
 ) : BaseViewModel() {
-    val placeList = MutableLiveData<List<NewsItem>>().apply { value = ArrayList() }
+    val newsList = MutableLiveData<List<NewsItem>>().apply { value = ArrayList() }
     val loadingVisibility = MutableLiveData<Int>().apply { value = View.GONE }
     val retryVisibility = MutableLiveData<Int>().apply { value = View.GONE }
     val networkError = MutableLiveData<Event<String>>()
@@ -28,7 +28,7 @@ class NewsListViewModel @Inject constructor(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                placeList.value = it
+                newsList.value = it
                 loadingVisibility.value = View.GONE
                 retryVisibility.value = View.GONE
 

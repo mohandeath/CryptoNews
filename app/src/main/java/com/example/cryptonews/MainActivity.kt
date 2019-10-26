@@ -6,7 +6,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cryptonews.adapters.NewsListAdapter
 import com.example.cryptonews.di.DaggerViewModelFactory
+import com.example.cryptonews.util.ImageHelper
 import com.example.cryptonews.viewmodel.NewsListViewModel
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +22,9 @@ class MainActivity : DaggerAppCompatActivity() {
     lateinit var viewModelFactory: DaggerViewModelFactory
     lateinit var viewModel: NewsListViewModel
     lateinit var layoutManager: RecyclerView.LayoutManager
-
+    lateinit var adapter: NewsListAdapter
+    @Inject
+    lateinit var imageHelper: ImageHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,12 +33,13 @@ class MainActivity : DaggerAppCompatActivity() {
         viewModel.getData()
 
 
+        adapter = NewsListAdapter(imageHelper, this)
         layoutManager = LinearLayoutManager(this)
-        // newsRecyclerView.adapter = adapter
+        newsRecyclerView.adapter = adapter
         newsRecyclerView.layoutManager = layoutManager
 
-        viewModel.placeList.observe(this, Observer {
-            //     adapter.setList(it)
+        viewModel.newsList.observe(this, Observer {
+            adapter.setList(it)
         })
 
         viewModel.loadingVisibility.observe(this, Observer {

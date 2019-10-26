@@ -4,7 +4,6 @@ import android.app.Application
 import android.util.Log
 import com.example.cryptonews.BuildConfig
 import com.example.cryptonews.network.CryptoNewsService
-import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jakewharton.picasso.OkHttp3Downloader
@@ -47,14 +46,13 @@ class AppModule(private val application: Application) {
     @Provides
     internal fun provideGson(): Gson {
         return GsonBuilder()
-            .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+            // .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
             .create()
     }
 
     @Provides
     internal fun provideHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
-            .addInterceptor(Logger())
             .build()
     }
 

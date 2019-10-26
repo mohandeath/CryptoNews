@@ -16,10 +16,11 @@
     <dimen name="text_size_large">16dp</dimen>
     <dimen name="text_size_xlarge">18dp</dimen>
     <dimen name="text_size_xxlarge">20dp</dimen>
+    <dimen name="text_size_title">16sp</dimen>
 
     <dimen name="loading_size">80dp</dimen>
     <dimen name="elevation_card">2dp</dimen>
-    <dimen name="text_size_title">18sp</dimen>
     <dimen name="card_radius">5dp</dimen>
+    <dimen name="image_height">120dip</dimen>
 
 </resources>

@@ -10,7 +10,7 @@ data class NewsItem(
     val url: String,
     val source: Source,
     val sourceDomain: String,
-    val originalImageUrl: String
+    val originalImageUrl: String = ""
 
 )
 
