@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.room.Room
 import com.example.cryptonews.BuildConfig
 import com.example.cryptonews.DATABASE_NAME
+import com.example.cryptonews.common.Utils
 import com.example.cryptonews.data.local.Database
 import com.example.cryptonews.data.local.NewsItemDAO
 import com.example.cryptonews.data.remote.CryptoNewsService
@@ -66,9 +67,9 @@ class AppModule(private val application: Application) {
 
     @Provides
     @Singleton
-    fun provideNewsDatabase(app: Application): Database {
+    fun provideNewsDatabase(): Database {
         return Room.databaseBuilder(
-            app,
+            application,
             Database::class.java, DATABASE_NAME
         )
             .fallbackToDestructiveMigration()
@@ -80,4 +81,9 @@ class AppModule(private val application: Application) {
     fun provideNewsDao(database: Database): NewsItemDAO = database.NewsItemDAO()
 
 
+    @Singleton
+    @Provides
+    fun provideUtils(): Utils {
+        return Utils(application)
+    }
 }

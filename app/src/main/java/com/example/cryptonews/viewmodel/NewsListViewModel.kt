@@ -9,6 +9,7 @@ import com.example.cryptonews.repository.NewsRepository
 import com.example.cryptonews.util.Event
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 
@@ -27,6 +28,7 @@ class NewsListViewModel @Inject constructor(
         placesRepository.getNewsList()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
+            .debounce(400, TimeUnit.MILLISECONDS)
             .subscribe({
                 newsList.value = it
                 loadingVisibility.value = View.GONE
