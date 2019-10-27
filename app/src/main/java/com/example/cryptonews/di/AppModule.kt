@@ -1,21 +1,22 @@
 package com.example.cryptonews.di
 
 import android.app.Application
-import android.util.Log
+import androidx.room.Room
 import com.example.cryptonews.BuildConfig
-import com.example.cryptonews.network.CryptoNewsService
+import com.example.cryptonews.DATABASE_NAME
+import com.example.cryptonews.data.local.Database
+import com.example.cryptonews.data.local.NewsItemDAO
+import com.example.cryptonews.data.remote.CryptoNewsService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jakewharton.picasso.OkHttp3Downloader
 import com.squareup.picasso.Picasso
 import dagger.Module
 import dagger.Provides
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.nio.charset.Charset
 import javax.inject.Singleton
 
 /**
@@ -46,9 +47,9 @@ class AppModule(private val application: Application) {
     @Provides
     internal fun provideGson(): Gson {
         return GsonBuilder()
-            // .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
             .create()
     }
+
 
     @Provides
     internal fun provideHttpClient(): OkHttpClient {
@@ -63,28 +64,20 @@ class AppModule(private val application: Application) {
         return Picasso.Builder(application).downloader(OkHttp3Downloader(client)).build()
     }
 
-
-}
-
-/**
- * This class is not essential
- * added this interceptor just to show the responses in the logcat
- * e.g the error with the google api can be recognizable here
- */
-class Logger : Interceptor {
-    override fun intercept(chain: Interceptor.Chain?): okhttp3.Response {
-
-        val request = chain?.request()
-        Log.i("NETLOG", "call ==> " + request?.url())
-        val response = chain?.proceed(request!!)
-        val responseBody = response?.body()
-        val source = responseBody!!.source()
-        source.request(java.lang.Long.MAX_VALUE) // Buffer the entire body.
-        val buffer = source.buffer()
-        val strResponse = buffer.clone().readString(Charset.forName("UTF8")).toString()
-        Log.e("NETLOG", "status code : ${response.code()} and ret ==> " + strResponse)
-
-        return response
-
+    @Provides
+    @Singleton
+    fun provideNewsDatabase(app: Application): Database {
+        return Room.databaseBuilder(
+            app,
+            Database::class.java, DATABASE_NAME
+        )
+            .fallbackToDestructiveMigration()
+            .build()
     }
+
+    @Singleton
+    @Provides
+    fun provideNewsDao(database: Database): NewsItemDAO = database.NewsItemDAO()
+
+
 }

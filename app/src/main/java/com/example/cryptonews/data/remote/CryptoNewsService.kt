@@ -1,4 +1,4 @@
-package com.example.cryptonews.network
+package com.example.cryptonews.data.remote
 
 import com.example.cryptonews.data.model.NewsItem
 import io.reactivex.Single
