@@ -4,7 +4,7 @@ import android.app.Application
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import com.example.cryptonews.R
-import com.example.cryptonews.model.NewsItem
+import com.example.cryptonews.data.model.NewsItem
 import com.example.cryptonews.repository.NewsRepository
 import com.example.cryptonews.util.Event
 import io.reactivex.android.schedulers.AndroidSchedulers

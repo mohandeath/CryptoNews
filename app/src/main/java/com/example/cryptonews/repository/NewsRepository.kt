@@ -1,7 +1,7 @@
 package com.example.cryptonews.repository
 
 import com.example.cryptonews.BuildConfig
-import com.example.cryptonews.model.NewsItem
+import com.example.cryptonews.data.model.NewsItem
 import com.example.cryptonews.network.CryptoNewsService
 import io.reactivex.Single
 import javax.inject.Inject

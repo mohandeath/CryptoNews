@@ -1,6 +1,6 @@
 package com.example.cryptonews.network
 
-import com.example.cryptonews.model.NewsItem
+import com.example.cryptonews.data.model.NewsItem
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Header

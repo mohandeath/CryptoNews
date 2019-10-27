@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cryptonews.R
-import com.example.cryptonews.model.NewsItem
+import com.example.cryptonews.data.model.NewsItem
 import com.example.cryptonews.util.ImageHelper
 import kotlinx.android.synthetic.main.news_list_item.view.*
 
@@ -43,7 +43,7 @@ class NewsListAdapter(
     inner class NewsListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(item: NewsItem) {
             itemView.textTitle.text = item.title
-            itemView.textSource.text = item.source.name
+            itemView.textSource.text = item.sourceDomain
             itemView.textCategory.text = item.primaryCategory
             helper.loadImageOfflineFirst(
                 item.originalImageUrl,
