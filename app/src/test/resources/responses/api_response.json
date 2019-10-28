@@ -1,0 +1,320 @@
+[
+  {
+    "_id": "5db5d82b03f7410018b5f115",
+    "hotness": 72787.05424718256,
+    "activityHotness": 0.11739533071234382,
+    "primaryCategory": "General",
+    "words": 379,
+    "similarArticles": [],
+    "coins": [
+      {
+        "_id": "59cb59e81c073f09e76f614b",
+        "name": "Bitcoin",
+        "slug": "bitcoin",
+        "tradingSymbol": "btc"
+      }
+    ],
+    "description": "China is trying to become a region of importance again, at least where cryptocurrencies are concerned. Despite banning the trading of Bitcoin and altcoins several years ago, things are slowly changing in the country. The new cryptography law that passed in the country will go into effect on January…",
+    "publishedAt": "2019-10-27T17:37:16.000Z",
+    "title": "China Approves a new law To Commercialize Blockchain Technology",
+    "url": "https://cryptocontrol.io/r/api/article/5db5d82b03f7410018b5f115?ref=5db1b05903f74100186a5284",
+    "source": {
+      "_id": "59d8c2f8ef8bf95cc2bfb3cd",
+      "name": "The Merkle",
+      "url": "https://themerkle.com/",
+      "favicon": "https://assets.cryptocontrol.io/favicons/59d8c2f8ef8bf95cc2bfb3cd.png"
+    },
+    "sourceDomain": "themerkle.com",
+    "originalImageUrl": "https://themerkle.com/wp-content/uploads/blockchain-security.jpg"
+  },
+  {
+    "_id": "5db5d7dd03f7410018b5c26f",
+    "hotness": 72787.0292495352,
+    "activityHotness": 0.11133286853070033,
+    "primaryCategory": "General",
+    "words": 435,
+    "similarArticles": [],
+    "coins": [
+      {
+        "_id": "59d21e9b83a0523906a45db3",
+        "name": "NEO",
+        "slug": "neo",
+        "tradingSymbol": "neo"
+      }
+    ],
+    "description": "According to Erik Zhang, one of the founders of NEO said that the final official version of NEO 3.0 is expected to be released in 2020. April is […]\n",
+    "publishedAt": "2019-10-27T17:30:27.000Z",
+    "title": "Erik Zhang Says They Don’t Rule Out The Possibility Of Changing NEO’s Total Supply",
+    "url": "https://cryptocontrol.io/r/api/article/5db5d7dd03f7410018b5c26f?ref=5db1b05903f74100186a5284",
+    "source": {
+      "_id": "5a8093eb877b58f460aae35f",
+      "name": "Use The Bitcoin",
+      "url": "https://usethebitcoin.com/",
+      "favicon": "https://assets.cryptocontrol.io/favicons/5a8093eb877b58f460aae35f.png"
+    },
+    "sourceDomain": "usethebitcoin.com",
+    "originalImageUrl": "https://usethebitcoin.com/wp-content/uploads/2019/10/neo_color_light.png"
+  },
+  {
+    "_id": "5db5d38a03f7410018b34fda",
+    "hotness": 72787.01192780462,
+    "activityHotness": 0.12151113796169455,
+    "primaryCategory": "General",
+    "words": 465,
+    "similarArticles": [],
+    "coins": [
+      {
+        "_id": "59cb59e81c073f09e76f614b",
+        "name": "Bitcoin",
+        "slug": "bitcoin",
+        "tradingSymbol": "btc"
+      }
+    ],
+    "description": "According to data collected since 2013, Bitcoin generates most of its annual performance during just 10 days out of the entire year. It seems like its performance in the past few days that this theory still holds up. Bitcoin is up 26% since Friday — exploding past all expectations yet again. Trading…",
+    "publishedAt": "2019-10-27T17:20:33.000Z",
+    "title": "Bitcoin Historically Generates its Greatest Annual Performance in Just 10 Days",
+    "url": "https://cryptocontrol.io/r/api/article/5db5d38a03f7410018b34fda?ref=5db1b05903f74100186a5284",
+    "source": {
+      "_id": "5b964b640c38a70019787e71",
+      "name": "BeInCrypto",
+      "url": "https://beincrypto.com",
+      "favicon": "https://assets.cryptocontrol.io/favicons/5b964b640c38a70019787e71.jpg"
+    },
+    "sourceDomain": "beincrypto.com",
+    "originalImageUrl": "https://beincrypto.com/wp-content/uploads/2019/10/bic_btc_bitcoin_increase.jpg"
+  },
+  {
+    "_id": "5db5d68b03f7410018b51193",
+    "hotness": 72786.96757348199,
+    "activityHotness": 0.11484200051182732,
+    "primaryCategory": "Analysis",
+    "words": 434,
+    "similarArticles": [],
+    "coins": [
+      {
+        "_id": "59cb59e81c073f09e76f614b",
+        "name": "Bitcoin",
+        "slug": "bitcoin",
+        "tradingSymbol": "btc"
+      }
+    ],
+    "description": "The recovery of Bitcoin to $10,000 has led to a new projection that the token might hit $100,000 by 2021.…\n",
+    "publishedAt": "2019-10-27T17:06:59.000Z",
+    "title": "Bitcoin Bears Chased Out Of Market for Now – 3rd Largest Daily Gain in Price History",
+    "url": "https://cryptocontrol.io/r/api/article/5db5d68b03f7410018b51193?ref=5db1b05903f74100186a5284",
+    "source": {
+      "_id": "5c509bf423b00e00101f000b",
+      "name": "TheCurrencyAnalytics",
+      "url": "https://thecurrencyanalytics.com/",
+      "favicon": "https://assets.cryptocontrol.io/favicons/5c509bf423b00e00101f000b.jpg"
+    },
+    "sourceDomain": "thecurrencyanalytics.com",
+    "originalImageUrl": "https://thecurrencyanalytics.com/wp-content/uploads/2019/10/bitcoin-bears-300x300.jpg"
+  },
+  {
+    "_id": "5db5d00003f7410018b12340",
+    "hotness": 72786.95796250328,
+    "activityHotness": 0.12231435513142097,
+    "primaryCategory": "General",
+    "words": 1004,
+    "similarArticles": [],
+    "coins": [
+      {
+        "_id": "59d21e9b83a0523906a45db4",
+        "name": "IOTA",
+        "slug": "iota",
+        "tradingSymbol": "miota"
+      },
+      {
+        "_id": "59cb59e81c073f09e76f614b",
+        "name": "Bitcoin",
+        "slug": "bitcoin",
+        "tradingSymbol": "btc"
+      },
+      {
+        "_id": "59cb59f9b0836b0a63aebc7c",
+        "name": "Ethereum",
+        "tradingSymbol": "eth",
+        "slug": "ethereum"
+      },
+      {
+        "_id": "5a7b931102ac032bc99781f1",
+        "name": "DATA",
+        "slug": "data",
+        "tradingSymbol": "dta"
+      },
+      {
+        "_id": "59d21e9b83a0523906a45dd4",
+        "name": "Binance Coin",
+        "slug": "binance-coin",
+        "tradingSymbol": "bnb"
+      }
+    ],
+    "description": "In today’s guide, we will explain how to buy IOTA on Binance in detailed steps to help you acquire the crypto easily. What Is IOTA? IOTA is an Internet of Things (IoT) project created in 2015 by Sergey Ivancheglo, David Sontesbo, Serguei Popov, and Dominik. The IOTA crypto was designed to facilitate…",
+    "publishedAt": "2019-10-27T17:00:50.000Z",
+    "title": "How to Buy IOTA on Binance in 2019 | Step by Step Guide",
+    "url": "https://cryptocontrol.io/r/api/article/5db5d00003f7410018b12340?ref=5db1b05903f74100186a5284",
+    "source": {
+      "_id": "5af1c9d401aed341ae236047",
+      "name": "CoinDoo",
+      "url": "https://coindoo.com",
+      "favicon": "https://assets.cryptocontrol.io/favicons/5af1c9d401aed341ae236047.png"
+    },
+    "sourceDomain": "coindoo.com",
+    "originalImageUrl": "https://coindoo.com/wp-content/uploads/2019/10/IOTA_MIOTA-890x450.jpg"
+  },
+  {
+    "_id": "5db5d4bc03f7410018b3f8c5",
+    "hotness": 72786.94008657354,
+    "activityHotness": 0.10953101798043251,
+    "primaryCategory": "ICO",
+    "words": 352,
+    "similarArticles": [],
+    "coins": [
+      {
+        "_id": "59cb59f9b0836b0a63aebc7c",
+        "name": "Ethereum",
+        "tradingSymbol": "eth",
+        "slug": "ethereum"
+      }
+    ],
+    "description": "The Ontario Securities Commission (OSC) is green lighting TokenGX’s request to facilitate secondary-market trading of security tokens. The platform will be released as a pilot program supporting security tokens until 2021.  The Ontario Securities Commission has approved a security token trading…",
+    "publishedAt": "2019-10-27T16:59:00.000Z",
+    "title": "Ontario Regulatory Green Lights First Security Token Startup",
+    "url": "https://cryptocontrol.io/r/api/article/5db5d4bc03f7410018b3f8c5?ref=5db1b05903f74100186a5284",
+    "source": {
+      "_id": "5bac8c510c38a70019df9d73",
+      "name": "The Tokenist",
+      "url": "https://thetokenist.io/",
+      "favicon": "https://assets.cryptocontrol.io/favicons/5bac8c510c38a70019df9d73.png"
+    },
+    "sourceDomain": "thetokenist.io",
+    "originalImageUrl": "https://thetokenist.io/wp-content/uploads/2019/10/4YI6XIIS6RE2ZEGELPFQJ2Y3TM.jpeg"
+  },
+  {
+    "_id": "5db5d08403f7410018b168f3",
+    "hotness": 72786.94155144384,
+    "activityHotness": 0.11655144384775734,
+    "primaryCategory": "General",
+    "words": 1419,
+    "similarArticles": [],
+    "coins": [
+      {
+        "_id": "59cb59e81c073f09e76f614b",
+        "name": "Bitcoin",
+        "slug": "bitcoin",
+        "tradingSymbol": "btc"
+      },
+      {
+        "_id": "59d21e9b83a0523906a45db3",
+        "name": "NEO",
+        "slug": "neo",
+        "tradingSymbol": "neo"
+      },
+      {
+        "_id": "59d21e9b83a0523906a45daf",
+        "name": "Bitcoin Cash",
+        "slug": "bitcoin-cash",
+        "tradingSymbol": "bch"
+      },
+      {
+        "_id": "5a7b931102ac032bc99781f1",
+        "name": "DATA",
+        "slug": "data",
+        "tradingSymbol": "dta"
+      }
+    ],
+    "description": "The reversal in the price of Bitcoin and other cryptocurrencies in the past week points to a likely bottom formation and a change in sentiment to buy the dips.\nThough fundamentals play a large part in determining the price of an asset, short-term movements of the markets are driven by sentiment.…",
+    "publishedAt": "2019-10-27T16:57:00.000Z",
+    "title": "Top-5 Cryptos This Week: Bitcoin (BTC), NEO, BSV, BCH, LINK",
+    "url": "https://cryptocontrol.io/r/api/article/5db5d08403f7410018b168f3?ref=5db1b05903f74100186a5284",
+    "source": {
+      "_id": "59d70be3ef8bf95cc2aa2b4f",
+      "name": "CoinTelegraph",
+      "url": "https://cointelegraph.com/",
+      "favicon": "https://assets.cryptocontrol.io/favicons/59d70be3ef8bf95cc2aa2b4f.png"
+    },
+    "sourceDomain": "cointelegraph.com",
+    "originalImageUrl": "https://images.cointelegraph.com/images/740_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy9iMTZkMjc5YjFkMDNmNzVhNGY3MGVjMzBiMjhmZmM1Zi5qcGc=.jpg"
+  },
+  {
+    "_id": "5db5cfbf03f7410018b0f92d",
+    "hotness": 72786.88275514756,
+    "activityHotness": 0.11655144384775734,
+    "primaryCategory": "General",
+    "words": 1384,
+    "similarArticles": [],
+    "coins": [
+      {
+        "_id": "59cb59e81c073f09e76f614b",
+        "name": "Bitcoin",
+        "slug": "bitcoin",
+        "tradingSymbol": "btc"
+      },
+      {
+        "_id": "59d21e9b83a0523906a45daf",
+        "name": "Bitcoin Cash",
+        "slug": "bitcoin-cash",
+        "tradingSymbol": "bch"
+      },
+      {
+        "_id": "59d21e9b83a0523906a45dbe",
+        "name": "Tether",
+        "slug": "tether",
+        "tradingSymbol": "usdt"
+      },
+      {
+        "_id": "59d8e9a749f28d56105673f4",
+        "name": "Jewels",
+        "slug": "jewels",
+        "tradingSymbol": "jwl"
+      },
+      {
+        "_id": "59cb5a047ab17a0b2ec00edf",
+        "name": "Ripple",
+        "tradingSymbol": "xrp",
+        "slug": "ripple"
+      }
+    ],
+    "description": "Digital currency markets are coasting along after an enormous move on Friday of more than 20-40%. The entire cryptoconomy is hovering around $249 billion as it gained a whopping $30 billion very quickly this week. Crypto prices corrected a touch since the spike, but are still well above the lows…",
+    "publishedAt": "2019-10-27T16:35:50.000Z",
+    "title": "Market Update: Crypto Prices Hold Steady After Massive Bullish Spike",
+    "url": "https://cryptocontrol.io/r/api/article/5db5cfbf03f7410018b0f92d?ref=5db1b05903f74100186a5284",
+    "source": {
+      "_id": "59d71c67ef8bf95cc2ab0147",
+      "name": "Bitcoin.com",
+      "url": "https://news.bitcoin.com/",
+      "favicon": "https://assets.cryptocontrol.io/favicons/59d71c67ef8bf95cc2ab0147.png"
+    },
+    "sourceDomain": "news.bitcoin.com",
+    "originalImageUrl": "https://news.bitcoin.com/wp-content/uploads/2019/10/jjjjj999999.jpg"
+  },
+  {
+    "_id": "5db5c99b03f7410018ad1eb0",
+    "hotness": 72786.88963735118,
+    "activityHotness": 0.1385262400790645,
+    "primaryCategory": "Analysis",
+    "words": 281,
+    "similarArticles": [],
+    "coins": [
+      {
+        "_id": "59cb59f9b0836b0a63aebc7c",
+        "name": "Ethereum",
+        "tradingSymbol": "eth",
+        "slug": "ethereum"
+      }
+    ],
+    "description": "On 23 October, the price of the second-largest coin by market cap, ETH witnessed a six-month low as it dropped to $157.51 for a brief period of time. However, the coin was recovering, as it breached $190. Despite the significant surge the price of the altcoin was seen trading for a low of $176.29,…",
+    "publishedAt": "2019-10-27T16:30:24.000Z",
+    "title": "Ethereum: Buyers’ market despite uncertainty caused by symmetrical triangle",
+    "url": "https://cryptocontrol.io/r/api/article/5db5c99b03f7410018ad1eb0?ref=5db1b05903f74100186a5284",
+    "source": {
+      "_id": "5b4b57d8c831fd000f6b7e16",
+      "name": "AMB Crypto",
+      "url": "https://ambcrypto.com/",
+      "favicon": "https://assets.cryptocontrol.io/favicons/5b4b57d8c831fd000f6b7e16.png"
+    },
+    "sourceDomain": "eng.ambcrypto.com",
+    "originalImageUrl": "https://sfo2.digitaloceanspaces.com/engamb/wp-content/uploads/2019/10/27180024/milky-way-2695569_960_720-e1572179436530.jpg"
+  }
+]

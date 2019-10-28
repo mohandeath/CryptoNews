@@ -43,7 +43,7 @@ class NewsDetailActivity : DaggerAppCompatActivity() {
             textDescription.text = it.description
             textTitle.text = it.title
             textSourceUrl.text = it.sourceDomain
-            btnReadMore.setOnClickListener { view ->
+            btnReadMore.setOnClickListener { _ ->
                 val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(it.url))
                 startActivity(browserIntent)
             }
