@@ -34,7 +34,7 @@ data class NewsItem(
     val sourceDomain: String,
 
     @ColumnInfo(name = "image")
-    val originalImageUrl: String = ""
+    val originalImageUrl: String?
 
 )
 

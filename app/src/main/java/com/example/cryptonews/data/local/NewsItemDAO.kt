@@ -13,6 +13,9 @@ interface NewsItemDAO {
     @Query("SELECT * FROM newsitem")
     fun getNewsItems(): Single<List<NewsItem>>
 
+    @Query("SELECT * FROM newsitem WHERE id= :id")
+    fun getNewsItem(id:String):Single<NewsItem>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertNewsItem(item: NewsItem)
 

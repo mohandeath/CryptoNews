@@ -19,7 +19,7 @@ class NewsRepository @Inject constructor(
     private val utils: Utils
 ) {
 
-    fun getNewsListFromAPI(): Single<List<NewsItem>> {
+    private fun getNewsListFromAPI(): Single<List<NewsItem>> {
         return newsService.getNewsList(true, BuildConfig.API_KEY)
             .doOnSuccess {
                 Log.e(TAG_DEBUG, "adding ${it.size} items to db")
@@ -28,7 +28,7 @@ class NewsRepository @Inject constructor(
 
     }
 
-    fun getNewsItemsFromDB(): Single<List<NewsItem>> {
+    private fun getNewsItemsFromDB(): Single<List<NewsItem>> {
         return newsDAO.getNewsItems()
     }
 
@@ -43,5 +43,9 @@ class NewsRepository @Inject constructor(
         else singleFromDB.toFlowable()
 
 
+    }
+
+    fun getNewsItemFromDB(id: String): Single<NewsItem> {
+        return newsDAO.getNewsItem(id)
     }
 }

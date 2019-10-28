@@ -2,5 +2,6 @@
     <string name="app_name">CryptoNews</string>
     <string name="general_network_error">Error connecting to server…</string>
     <string name="retry">Try Again!</string>
+    <string name="read_more">Read More</string>
 
 </resources>

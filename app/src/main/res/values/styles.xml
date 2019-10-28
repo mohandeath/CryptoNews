@@ -13,5 +13,16 @@
         <item name="matProg_progressIndeterminate">true</item>
     </style>
 
+    <style name="shadowedText">
+        <item name="android:padding">@dimen/space_1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:textColor">@color/light_font</item>
+        <item name="android:shadowColor">@color/text_shadow</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
 
 </resources>

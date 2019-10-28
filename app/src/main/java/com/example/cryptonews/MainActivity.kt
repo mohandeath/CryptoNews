@@ -1,7 +1,7 @@
 package com.example.cryptonews
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,6 +10,7 @@ import com.example.cryptonews.adapters.NewsListAdapter
 import com.example.cryptonews.di.DaggerViewModelFactory
 import com.example.cryptonews.util.ImageHelper
 import com.example.cryptonews.viewmodel.NewsListViewModel
+import com.google.android.material.snackbar.Snackbar
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.item_loading.*
@@ -18,11 +19,11 @@ import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity() {
 
+    lateinit var layoutManager: RecyclerView.LayoutManager
+    lateinit var adapter: NewsListAdapter
     @Inject
     lateinit var viewModelFactory: DaggerViewModelFactory
     lateinit var viewModel: NewsListViewModel
-    lateinit var layoutManager: RecyclerView.LayoutManager
-    lateinit var adapter: NewsListAdapter
     @Inject
     lateinit var imageHelper: ImageHelper
 
@@ -33,7 +34,12 @@ class MainActivity : DaggerAppCompatActivity() {
         viewModel.getData()
 
 
-        adapter = NewsListAdapter(imageHelper, this)
+        adapter = NewsListAdapter(imageHelper, this){
+            val detailIntent = Intent(this,NewsDetailActivity::class.java).apply {
+                putExtra(NEWS_ID,it._id)
+            }
+            startActivity(detailIntent)
+        }
         layoutManager = LinearLayoutManager(this)
         newsRecyclerView.adapter = adapter
         newsRecyclerView.layoutManager = layoutManager
@@ -52,7 +58,10 @@ class MainActivity : DaggerAppCompatActivity() {
 
         viewModel.networkError.observe(this, Observer { event ->
             event?.getContentIfNotHandledOrReturnNull()?.let {
-                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+                Snackbar.make(newsRecyclerView, it, Snackbar.LENGTH_LONG)
+                    .setAction("retry") {viewModel.retry()}
+
+                    .show()
             }
         })
 

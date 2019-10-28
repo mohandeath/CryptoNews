@@ -3,7 +3,6 @@ package com.example.cryptonews.viewmodel
 import android.app.Application
 import android.view.View
 import androidx.lifecycle.MutableLiveData
-import com.example.cryptonews.R
 import com.example.cryptonews.data.model.NewsItem
 import com.example.cryptonews.repository.NewsRepository
 import com.example.cryptonews.util.Event
@@ -15,7 +14,7 @@ import javax.inject.Inject
 
 class NewsListViewModel @Inject constructor(
     private val appContext: Application,
-    private val placesRepository: NewsRepository
+    private val newsRepository: NewsRepository
 ) : BaseViewModel() {
     val newsList = MutableLiveData<List<NewsItem>>().apply { value = ArrayList() }
     val loadingVisibility = MutableLiveData<Int>().apply { value = View.GONE }
@@ -25,7 +24,7 @@ class NewsListViewModel @Inject constructor(
 
     fun getData() {
         loadingVisibility.value = View.VISIBLE
-        placesRepository.getNewsList()
+        newsRepository.getNewsList()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .debounce(400, TimeUnit.MILLISECONDS)
@@ -35,9 +34,11 @@ class NewsListViewModel @Inject constructor(
                 retryVisibility.value = View.GONE
 
             }, {
+                it.printStackTrace()
+
                 loadingVisibility.value = View.GONE
                 retryVisibility.value = View.VISIBLE
-                networkError.value = Event(appContext.getString(R.string.general_network_error))
+                networkError.value = Event(it.message ?: "Error")
 
             })
             .also { addToUnsubscribe(it) }

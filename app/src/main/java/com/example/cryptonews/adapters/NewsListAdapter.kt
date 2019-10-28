@@ -12,7 +12,8 @@ import kotlinx.android.synthetic.main.news_list_item.view.*
 
 class NewsListAdapter(
     private val helper: ImageHelper,
-    private val context: Context
+    private val context: Context,
+    val onClick:  (NewsItem) -> Unit
 ) : RecyclerView.Adapter<NewsListAdapter.NewsListViewHolder>() {
 
     private var newsItems: MutableList<NewsItem> = ArrayList()
@@ -38,6 +39,8 @@ class NewsListAdapter(
     override fun onBindViewHolder(holder: NewsListViewHolder, position: Int) {
         val item = newsItems[position]
         holder.bind(item)
+        // using lambda function to make the item unaware of click listener
+        holder.itemView.setOnClickListener { onClick(item) }
     }
 
     inner class NewsListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -45,11 +48,15 @@ class NewsListAdapter(
             itemView.textTitle.text = item.title
             itemView.textSource.text = item.sourceDomain
             itemView.textCategory.text = item.primaryCategory
-            helper.loadImageOfflineFirst(
-                item.originalImageUrl,
-                itemView.newsImage,
-                R.drawable.image_ph
-            )
+            item.originalImageUrl?.let {
+                helper.loadImageOfflineFirst(
+                    it,
+                    itemView.newsImage,
+                    R.drawable.image_ph
+                )
+            }
+
+
         }
     }
 

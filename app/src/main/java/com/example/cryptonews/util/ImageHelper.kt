@@ -37,11 +37,11 @@ class ImageHelper @Inject constructor(
         }
     }
 
-    fun loadImageOfflineFirst(url: String, imgView: ImageView?, placeHolder: Int) {
+    fun loadImageOfflineFirst(url: String, imgView: ImageView?, placeHolder: Int=R.drawable.image_ph) {
         try {
             picasso.load(url)
-                .placeholder(placeHolder)
                 .networkPolicy(NetworkPolicy.OFFLINE)
+                .placeholder(placeHolder)
                 .into(imgView, object : Callback {
                     override fun onSuccess() {
 
