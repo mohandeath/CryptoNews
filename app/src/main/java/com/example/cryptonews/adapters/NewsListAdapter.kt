@@ -51,8 +51,7 @@ class NewsListAdapter(
             item.originalImageUrl?.let {
                 helper.loadImageOfflineFirst(
                     it,
-                    itemView.newsImage,
-                    R.drawable.image_ph
+                    itemView.newsImage
                 )
             }
 

@@ -14,10 +14,12 @@ import com.jakewharton.picasso.OkHttp3Downloader
 import com.squareup.picasso.Picasso
 import dagger.Module
 import dagger.Provides
+import okhttp3.Cache
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.File
 import javax.inject.Singleton
 
 /**
@@ -53,14 +55,18 @@ class AppModule(private val application: Application) {
 
 
     @Provides
-    internal fun provideHttpClient(): OkHttpClient {
+    internal fun provideHttpClient(application: Application): OkHttpClient {
+        val httpCacheDirectory = File(application.cacheDir, "picasso-cache")
+        val cache = Cache(httpCacheDirectory, 30 * 1024 * 1024)
         return OkHttpClient.Builder()
+            .cache(cache)
             .build()
     }
 
     @Singleton
     @Provides
     internal fun providePicassoClient(application: Application, client: OkHttpClient): Picasso {
+
 
         return Picasso.Builder(application).downloader(OkHttp3Downloader(client)).build()
     }
