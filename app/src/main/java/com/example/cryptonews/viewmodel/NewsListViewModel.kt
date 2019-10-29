@@ -1,6 +1,5 @@
 package com.example.cryptonews.viewmodel
 
-import android.app.Application
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import com.example.cryptonews.data.model.NewsItem
@@ -13,7 +12,6 @@ import javax.inject.Inject
 
 
 class NewsListViewModel @Inject constructor(
-    private val appContext: Application,
     private val newsRepository: NewsRepository
 ) : BaseViewModel() {
     val newsList = MutableLiveData<List<NewsItem>>().apply { value = ArrayList() }

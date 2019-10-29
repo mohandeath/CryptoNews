@@ -36,7 +36,7 @@ class AppModule(private val application: Application) {
 
     @Singleton
     @Provides
-    internal fun providePlacesService(gson: Gson, httpClient: OkHttpClient): CryptoNewsService {
+    internal fun provideNewsService(gson: Gson, httpClient: OkHttpClient): CryptoNewsService {
         val retrofit = Retrofit.Builder()
             .baseUrl(BuildConfig.HTTP_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
