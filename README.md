@@ -3,9 +3,9 @@
 <img src="https://i.ibb.co/C0mJcBW/2019-10-29.png" height="640">
 
 This project was kind of a weekend project i've done for a technical assignment i've had and i thought it worths releasing.
-The main objective of this project is to showcase how to implement an offline-first application using MVVM + Reactive programming and also how to write some efficient unit tests for it. However, as a crypto fan, someties i openup the application myself to check the latest news 😁
+The main objective here is to showcase how to implement an offline-first application using MVVM + Reactive programming and also how to write some efficient unit tests for it. However, as a crypto fan, someties i openup the application myself to check the latest news 😁
 
-###Technologies:
+### Technologies:
 - Kotlin, App is written fully in Kotlin.
 - MVVM Architecture using lifecycle aware components + Repository Pattern
 - RxJava is used for reactive programming.
