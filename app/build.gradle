@@ -30,14 +30,15 @@ android {
 
     productFlavors {
         staging {
-            buildConfigField "String", "HTTP_BASE_URL", "\"https://cryptocontrol.io/api/v1/public/\""
-            buildConfigField "String", "API_KEY", "\"87531addd2648b3d7317e040a93c97cf\""
+            //using mocky.io in case of problems with the main API or if you don't want to setup an api key
+            buildConfigField "String", "HTTP_BASE_URL", "\"http://www.mocky.io/v2/5db895ba3b0000540035f22c/\""
+            buildConfigField "String", "API_KEY", "\"NO-NEED\""
 
         }
 
         production {
             buildConfigField "String", "HTTP_BASE_URL", "\"https://cryptocontrol.io/api/v1/public/\""
-            buildConfigField "String", "API_KEY", "\"87531addd2648b3d7317e040a93c97cf\""
+            buildConfigField "String", "API_KEY", "\"PLACE-YOUR-API-KEY\""
 
         }
     }

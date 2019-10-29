@@ -32,6 +32,11 @@ class NewsRepository @Inject constructor(
         return newsDAO.getNewsItems()
     }
 
+    /**
+     * since the api does not support pagination and
+     * the response has too many items to handle, i prefered to use Flowable instead of
+     * observable.
+     */
     fun getNewsList(): Flowable<List<NewsItem>> {
         val hasConnection = utils.isConnectedToInternet()
         var singleFromAPI: Single<List<NewsItem>>? = null
