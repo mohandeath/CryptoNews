@@ -1,6 +1,6 @@
 ## CryptoNews
 ##### CryptoNews is an Android application that retrieves the latest news about Cryptocurrencies from https://cryptocontrol.io/ and saves them to the database for the offline use.
-[![Cryptonews](https://i.ibb.co/C0mJcBW/2019-10-29.png =360x240 "Cryptonews")]
+[![Cryptonews](https://i.ibb.co/C0mJcBW/2019-10-29.png  "Cryptonews")]
 
 This project was kind of a weekend project i've done for a technical assignment i've had and i thought it worths releasing.
 The main objective of this project is to showcase how to implement an offline-first application using MVVM + Reactive programming and also how to write some efficient unit tests for it. However, as a crypto fan, someties i openup the application myself to check the latest news 😁
