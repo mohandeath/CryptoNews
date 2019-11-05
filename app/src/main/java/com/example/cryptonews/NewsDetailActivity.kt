@@ -18,7 +18,7 @@ class NewsDetailActivity : DaggerAppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory: DaggerViewModelFactory
-    lateinit var viewModel: NewsDetailViewModel
+    private lateinit var viewModel: NewsDetailViewModel
     @Inject
     lateinit var imageHelper: ImageHelper
 

@@ -3,5 +3,8 @@
     <string name="general_network_error">Error connecting to server…</string>
     <string name="retry">Try Again!</string>
     <string name="read_more">Read More</string>
+    <string name="cover_image">Cover Image</string>
+    <string name="image_of_the_news_item">Image of the News item</string>
+    <string name="backbtn">BackBtn</string>
 
 </resources>

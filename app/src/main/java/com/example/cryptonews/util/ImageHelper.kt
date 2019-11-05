@@ -19,24 +19,6 @@ class ImageHelper @Inject constructor(
 ) {
 
 
-    fun loadImage(url: String, imgView: ImageView?, placeHolder: Int) {
-        try {
-            try {
-                imgView?.setImageResource(R.drawable.image_ph)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-            picasso
-                .load(url)
-                .placeholder(placeHolder)
-                .centerCrop()
-                .into(imgView)
-
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
     fun loadImageOfflineFirst(url: String, imgView: ImageView?, placeHolder: Int=R.drawable.image_ph) {
         try {
             picasso.load(url)
@@ -59,51 +41,6 @@ class ImageHelper @Inject constructor(
                 })
 
 
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-
-    fun loadImageWithResize(url: String, imgView: ImageView?, cropSize: Int) {
-        try {
-            picasso
-                .load(url)
-                .resize(cropSize, cropSize)
-                .centerCrop()
-                .into(imgView)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-    fun loadImageWithOutCenterCrop(url: String, imgView: ImageView?, placeHolder: Int) {
-        try {
-            picasso
-                .load(url)
-                .placeholder(placeHolder)
-                .into(imgView)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-    fun loadImage(url: String, imgView: ImageView?) {
-        try {
-            picasso
-                .load(url)
-                // .centerCrop()
-                .into(imgView)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-    fun loadImageWithOutPlaceHolder(url: String, imgView: ImageView?) {
-        try {
-            picasso
-                .load(url)
-                .into(imgView)
         } catch (e: Exception) {
             e.printStackTrace()
         }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
 
@@ -28,22 +27,22 @@
                     android:layout_width="0dp"
                     android:layout_height="@dimen/detail_image_h"
                     android:background="@color/colorPrimary"
+                    android:contentDescription="@string/cover_image"
+                    android:elevation="0dp"
                     android:scaleType="centerCrop"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/cover_image"
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
             <View
                     android:layout_width="0dp"
                     android:layout_height="@dimen/detail_image_h"
                     android:background="@drawable/cover_gradient"
+                    android:elevation="2dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-
 
 
             <ImageView
@@ -51,12 +50,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/space_2"
-                    android:layout_marginLeft="@dimen/space_2"
                     android:layout_marginTop="@dimen/space_2"
+                    android:contentDescription="@string/backbtn"
+                    android:elevation="3dp"
 
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/imageCover"
-                    android:contentDescription="@string/backbtn"
                     app:srcCompat="@drawable/ic_back" />
 
             <TextView
@@ -70,7 +69,6 @@
                     app:layout_constraintBottom_toTopOf="@+id/textTitle"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
-
 
 
             <TextView
@@ -108,11 +106,11 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
             android:text="@string/read_more"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -84,7 +84,7 @@ class AppModule(private val application: Application) {
 
     @Singleton
     @Provides
-    fun provideNewsDao(database: Database): NewsItemDAO = database.NewsItemDAO()
+    fun provideNewsDao(database: Database): NewsItemDAO = database.newsItemDAO()
 
 
     @Singleton

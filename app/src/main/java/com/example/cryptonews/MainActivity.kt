@@ -19,8 +19,8 @@ import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity() {
 
-    lateinit var layoutManager: RecyclerView.LayoutManager
-    lateinit var adapter: NewsListAdapter
+    private lateinit var layoutManager: RecyclerView.LayoutManager
+    private lateinit var adapter: NewsListAdapter
     @Inject
     lateinit var viewModelFactory: DaggerViewModelFactory
     lateinit var viewModel: NewsListViewModel
@@ -80,7 +80,7 @@ class MainActivity : DaggerAppCompatActivity() {
         }
     }
 
-    fun setupViewModel() {
+    private fun setupViewModel() {
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(NewsListViewModel::class.java)
         viewModel.getData()
 

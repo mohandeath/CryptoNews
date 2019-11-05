@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- pre defined values for spacing (padding, margins) based on 8dp grid system -->
     <dimen name="space_0">4dp</dimen>
     <dimen name="space_1">8dp</dimen>
     <dimen name="space_2">16dp</dimen>
-    <dimen name="space_3">24dp</dimen>
-    <dimen name="space_4">32dp</dimen>
-    <dimen name="space_5">40dp</dimen>
-    <dimen name="space_6">48dp</dimen>
-    <dimen name="space_7">56dp</dimen>
-    <dimen name="space_8">64dp</dimen>
+    <dimen name="space_3" tools:keep="@dimen/space_3">24dp</dimen>
+    <dimen name="space_4" tools:keep="@dimen/space_4">32dp</dimen>
+    <dimen name="space_5" tools:keep="@dimen/space_5">40dp</dimen>
+    <dimen name="space_6" tools:keep="@dimen/space_6">48dp</dimen>
+    <dimen name="space_7" tools:keep="@dimen/space_7">56dp</dimen>
+    <dimen name="space_8" tools:keep="@dimen/space_8">64dp</dimen>
 
     <dimen name="text_size_xsmall">10sp</dimen>
     <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_medium">14sp</dimen>
-    <dimen name="text_size_large">16sp</dimen>
-    <dimen name="text_size_xlarge">18sp</dimen>
-    <dimen name="text_size_xxlarge">20sp</dimen>
+    <dimen name="text_size_large" tools:keep="@dimen/text_size_large">16sp</dimen>
+    <dimen name="text_size_xlarge" tools:keep="@dimen/text_size_xlarge">18sp</dimen>
+    <dimen name="text_size_xxlarge" tools:keep="@dimen/text_size_xxlarge">20sp</dimen>
     <dimen name="text_size_title">16sp</dimen>
 
     <dimen name="loading_size">80dp</dimen>

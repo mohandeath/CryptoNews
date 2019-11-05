@@ -21,6 +21,7 @@
                 android:layout_marginLeft="8dp"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
+                android:contentDescription="@string/image_of_the_news_item"
                 app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
