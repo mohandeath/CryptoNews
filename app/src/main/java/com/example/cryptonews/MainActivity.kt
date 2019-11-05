@@ -30,20 +30,16 @@ class MainActivity : DaggerAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        viewModel = ViewModelProviders.of(this, viewModelFactory).get(NewsListViewModel::class.java)
-        viewModel.getData()
 
+        setupViewModel()
 
-        adapter = NewsListAdapter(imageHelper, this){
-            val detailIntent = Intent(this,NewsDetailActivity::class.java).apply {
-                putExtra(NEWS_ID,it._id)
-            }
-            startActivity(detailIntent)
-        }
-        layoutManager = LinearLayoutManager(this)
-        newsRecyclerView.adapter = adapter
-        newsRecyclerView.layoutManager = layoutManager
+        setupViews()
 
+        observeChanges()
+
+    }
+
+    private fun observeChanges() {
         viewModel.newsList.observe(this, Observer {
             adapter.setList(it)
         })
@@ -59,15 +55,34 @@ class MainActivity : DaggerAppCompatActivity() {
         viewModel.networkError.observe(this, Observer { event ->
             event?.getContentIfNotHandledOrReturnNull()?.let {
                 Snackbar.make(newsRecyclerView, it, Snackbar.LENGTH_LONG)
-                    .setAction("retry") {viewModel.retry()}
+                    .setAction("retry") { viewModel.retry() }
 
                     .show()
             }
         })
 
+    }
+
+    private fun setupViews() {
+        adapter = NewsListAdapter(imageHelper, this) {
+            val detailIntent = Intent(this, NewsDetailActivity::class.java).apply {
+                putExtra(NEWS_ID, it._id)
+            }
+            startActivity(detailIntent)
+        }
+        layoutManager = LinearLayoutManager(this)
+        newsRecyclerView.adapter = adapter
+        newsRecyclerView.layoutManager = layoutManager
+
+
         retryBtn.setOnClickListener {
             viewModel.retry()
         }
+    }
+
+    fun setupViewModel() {
+        viewModel = ViewModelProviders.of(this, viewModelFactory).get(NewsListViewModel::class.java)
+        viewModel.getData()
 
     }
 }

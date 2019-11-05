@@ -26,15 +26,17 @@ class NewsDetailActivity : DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_detail)
 
-        //removing toolbar programatically for this specific one
+        setupViewModel()
+
         supportActionBar?.hide()
         backBtn.setOnClickListener { super.onBackPressed() }
-        val newsId = intent.getStringExtra(NEWS_ID)
 
-        viewModel =
-            ViewModelProviders.of(this, viewModelFactory).get(NewsDetailViewModel::class.java)
-        viewModel.newsId = newsId
+        observeViewModelEvents()
 
+
+    }
+
+    private fun observeViewModelEvents() {
         viewModel.newsItemData.observe(this, Observer {
             it.originalImageUrl?.let { url ->
                 imageHelper.loadImageOfflineFirst(url, imageCover)
@@ -48,7 +50,14 @@ class NewsDetailActivity : DaggerAppCompatActivity() {
                 startActivity(browserIntent)
             }
         })
+    }
 
+    private fun setupViewModel() {
+        val newsId = intent.getStringExtra(NEWS_ID) ?: "-1"
+
+        viewModel =
+            ViewModelProviders.of(this, viewModelFactory).get(NewsDetailViewModel::class.java)
+        viewModel.newsId = newsId
 
     }
 }

@@ -16,7 +16,11 @@ class NewsDetailViewModel @Inject constructor(
     var newsId: String = ""
         set(value) {
             field = value
-            getNewsDetail()
+
+            if (newsId == "-1")
+                loadError.value = Event("There's a problem loading this item")
+            else
+                getNewsDetail()
         }
 
     private fun getNewsDetail() {
